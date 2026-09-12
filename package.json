@@ -1,0 +1,60 @@
+{
+  "name": "@c6fc/spellcraft-plugins",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "check": "node scripts/check-native-refs.js",
+    "doc": "node scripts/doc-all.js",
+    "prepublishOnly": "npm run check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c6fc/spellcraft-plugins.git"
+  },
+  "spellcraft": true,
+  "keywords": [
+    "spellcraft",
+    "terraform",
+    "aws",
+    "gcp"
+  ],
+  "author": "Brad Woodward (brad@bradwoodward.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/c6fc/spellcraft-plugins/issues"
+  },
+  "homepage": "https://github.com/c6fc/spellcraft-plugins#readme",
+  "description": "The SpellCraft plugin collection: AWS and GCP credentials, Terraform lifecycle and state backends, and resource factories, as one nested Jsonnet namespace.",
+  "peerDependencies": {
+    "@c6fc/spellcraft": "^2.0.0"
+  },
+  "devDependencies": {
+    "@c6fc/spellcraft": "^2.0.0",
+    "@hanazuki/node-jsonnet": "^3.1.1"
+  },
+  "dependencies": {
+    "@c6fc/terraform": "^1.3.0",
+    "@inquirer/prompts": "^8.3.2",
+    "aws-sdk": "^2.1692.0",
+    "google-auth-library": "^10.5.0",
+    "googleapis": "^170.0.0",
+    "ini": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "index.js",
+    "module.libsonnet",
+    "aws/",
+    "gcp/",
+    "terraform/",
+    "utils/",
+    "LICENSE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
